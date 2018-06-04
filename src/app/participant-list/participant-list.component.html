@@ -1,0 +1,23 @@
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Activity</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let part of participants">
+      <td>{{ part.firstName }}</td>
+      <td>{{ part.lastName }}</td>
+      <td>{{ part.email }}</td>
+      <td>{{ part.activity }}</td>
+      <td>{{ part.comments }}</td>
+    </tr>
+
+  </tbody>
+</table>

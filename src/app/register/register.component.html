@@ -1,0 +1,61 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName">First name:</label>
+      <input ngModel name="firstName"
+        type="text"
+        class="form-control"
+        id="inputFirstName"
+        placeholder="First name"
+        required
+        #fname="ngModel">
+      <div class="text-danger" *ngIf="!fname.valid && fname.touched">Please enter your first name.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Last name:</label>
+      <input ngModel name="lastName"
+        type="text"
+        class="form-control"
+        id="inputLastName"
+        placeholder="Last name"
+        required
+        #lname="ngModel">
+      <div class="text-danger" *ngIf="!lname.valid && lname.touched">Please enter your last name.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Email:</label>
+      <input ngModel name="email"
+        type="text"
+        class="form-control"
+        id="inputEmail"
+        placeholder="Email"
+        required
+        email
+        #email="ngModel">
+      <div class="text-danger" *ngIf="!email.valid && email.touched">Please enter a valid email address.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputActivity">Activity:</label>
+      <input ngModel name="activity"
+        type="text"
+        class="form-control"
+        id="inputActivity"
+        placeholder="Activity"
+        required
+        #activity="ngModel">
+      <div class="text-danger" *ngIf="!activity.valid && activity.touched">Please enter the activity you are interested in.</div>
+    </div>
+    <div class="form-group  col-md-12">
+      <label for="inputComments">Commets:</label>
+      <input ngModel name="comments"
+        type="text" class="form-control" id="inputComments" placeholder="Comments">
+    </div>
+  </div>
+  <div class="col-md-12">
+
+    <button
+      type="submit"
+      class="btn btn-primary pull-right"
+      [disabled]="!f.valid">Register</button>
+  </div>
+</form>
